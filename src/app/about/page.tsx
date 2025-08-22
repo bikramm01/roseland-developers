@@ -24,11 +24,13 @@ export default function AboutPage() {
 
     {/* 👇 Image after tagline */}
     <div className="flex justify-center">
-      <img
-        src="/about-team.jpg" // ✅ replace with your image path
-        alt="Roseland Developers Team"
-        className="rounded-2xl shadow-lg max-h-72 object-cover"
-      />
+     <Image
+  src="/comingsoon.png"
+  alt="About"
+  width={800}  // must set width + height
+  height={600}
+  className="w-full h-auto"
+/>
     </div>
   </div>
 </section>
