@@ -1,16 +1,22 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const apiKey = process.env.RESEND_API_KEY;
+
+if (!apiKey) {
+  throw new Error("RESEND_API_KEY is missing. Check your .env.local");
+}
+
+const resend = new Resend(apiKey);
 
 export async function POST(req: Request) {
   try {
     const { name, email, phone, message } = await req.json();
 
-    // ✅ Email to you
+    // Email to you
     await resend.emails.send({
-      from: "Roseland Website <onboarding@resend.dev>", // replace with your domain email
-      to: "youremail@example.com", // change to your email
+      from: "Roseland Website <onboarding@resend.dev>",
+      to: "info@roselanddevelopers.com",
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -21,9 +27,9 @@ export async function POST(req: Request) {
       `,
     });
 
-    // ✅ Auto-reply to the user
+    // Auto-reply
     await resend.emails.send({
-      from: "Roseland Developers <onboarding@resend.dev>", // use your domain email
+      from: "Roseland Developers <onboarding@resend.dev>",
       to: email,
       subject: "Thank you for contacting Roseland Developers",
       html: `
@@ -36,6 +42,6 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error(error);
-    return NextResponse.json({ success: false, error }, { status: 500 });
+    return NextResponse.json({ success: false, error: error instanceof Error ? error.message : String(error) }, { status: 500 });
   }
 }
