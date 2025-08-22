@@ -184,7 +184,7 @@ export default function ContactPage() {
             <Mail className="w-8 h-8 text-purple-400" />
             <div>
               <h3 className="font-semibold text-lg">Email</h3>
-              <p className="text-gray-400">info@roseland.com</p>
+              <p className="text-gray-400">info@roselanddevelopers.com</p>
             </div>
           </motion.div>
 
@@ -195,7 +195,7 @@ export default function ContactPage() {
             <Phone className="w-8 h-8 text-purple-400" />
             <div>
               <h3 className="font-semibold text-lg">Phone</h3>
-              <p className="text-gray-400">+91 98765 43210</p>
+              <p className="text-gray-400">+91 97725 64805</p>
             </div>
           </motion.div>
 

@@ -138,9 +138,9 @@ export default function Home() {
           className="pb-12"
         >
           {[
-            { name: "Abisekh Bhati", role: "Architect | Managing Partner", img: "/team1.jpg" },
-            { name: "Dharmpal", role: "Manager", img: "/team2.jpg" },
-            { name: "Daskh Choudhary", role: "Sales Head", img: "/team3.jpg" },
+            { name: "Abhishek Bhati", role: "Architect | Managing Partner", img: "/team1.JPG" },
+            { name: "Dharmpal Bikal", role: "Manager", img: "/team2.jpg" },
+            { name: "Daksh Choudhary", role: "Sales Head", img: "/team3.jpg" },
             { name: "Devinder Singh", role: "Site Supervisor", img: "/team4.jpg" },
             { name: "Raj Kishor", role: "Site Supervisor", img: "/team5.jpg" },
             { name: "Rakesh", role: "Site Supervisor", img: "/team6.jpg" },
