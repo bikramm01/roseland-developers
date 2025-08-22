@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link"; // ✅ Import Link
 import { Facebook, Instagram, Linkedin, Phone, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
@@ -31,10 +32,18 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-3">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/#about" className="hover:text-yellow-400 transition">About Us</a></li>
-              <li><a href="/#projects" className="hover:text-yellow-400 transition">Projects</a></li>
-              <li><a href="/#team" className="hover:text-yellow-400 transition">Team</a></li>
-              <li><a href="/contact" className="hover:text-yellow-400 transition">Contact</a></li>
+              <li>
+                <Link href="/#about" className="hover:text-yellow-400 transition">About Us</Link>
+              </li>
+              <li>
+                <Link href="/#projects" className="hover:text-yellow-400 transition">Projects</Link>
+              </li>
+              <li>
+                <Link href="/#team" className="hover:text-yellow-400 transition">Team</Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-yellow-400 transition">Contact</Link>
+              </li>
             </ul>
           </div>
 
@@ -46,10 +55,10 @@ export default function Footer() {
                 <MapPin size={16} className="text-yellow-400" /> Gurgaon, India
               </li>
               <li className="flex items-center justify-center md:justify-start gap-2">
-                <Phone size={16} className="text-yellow-400" /> +91 98765 43210
+                <Phone size={16} className="text-yellow-400" /> +91 97725 64805
               </li>
               <li className="flex items-center justify-center md:justify-start gap-2">
-                <Mail size={16} className="text-yellow-400" /> info@roseland.com
+                <Mail size={16} className="text-yellow-400" /> info@roselanddevelopers.com
               </li>
             </ul>
           </div>

@@ -220,7 +220,7 @@ export default function Home() {
 
       {/* WhatsApp Button */}
 <a
-  href="https://wa.me/919812345678" // ✅ Replace with your actual WhatsApp number
+  href="https://wa.me/919811880517" // ✅ Replace with your actual WhatsApp number
   target="_blank"
   rel="noopener noreferrer"
   className="flex items-center gap-2 w-full sm:w-auto justify-center bg-green-500 text-white font-bold py-3 px-6 rounded-xl hover:bg-green-600 transition shadow-md"
