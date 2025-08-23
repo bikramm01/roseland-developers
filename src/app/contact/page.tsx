@@ -5,6 +5,7 @@ import { motion, Variants } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Mail, Phone, MapPin, User, MessageSquare } from "lucide-react";
+import Head from "next/head";
 
 // ✅ Framer-motion variants
 const containerVariants: Variants = {
@@ -23,6 +24,7 @@ const fadeUp: Variants = {
     transition: { duration: 0.6, ease: "easeOut" },
   },
 };
+
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({ 
@@ -65,7 +67,10 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen flex flex-col bg-neutral-950 text-white">
       <Header />
-
+   <Head>
+        <title>Contact | Roseland Developers</title>
+        <meta name="description" content="Get in touch with Roseland Developers in Gurugram. Reach us via email, phone or the contact form." />
+      </Head>
       {/* Hero Section */}
       <section className="relative flex flex-col items-center justify-center text-center py-25 md:py-20 px-6 bg-gradient-to-br from-purple-900 via-neutral-900 to-black">
         <motion.h1

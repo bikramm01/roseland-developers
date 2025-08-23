@@ -13,10 +13,10 @@ export async function POST(req: Request) {
   try {
     const { name, email, phone, message } = await req.json();
 
-    // Email to you
+    // 1️⃣ Send message to your team
     await resend.emails.send({
-      from: "Roseland Website <onboarding@resend.dev>",
-      to: "info@roselanddevelopers.com",
+      from: "Roseland Website <info@roselanddevelopers.com>",
+      to: "info@roselanddevelopers.com", // your team email
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -27,10 +27,10 @@ export async function POST(req: Request) {
       `,
     });
 
-    // Auto-reply
+    // 2️⃣ Send thank-you email to user
     await resend.emails.send({
-      from: "Roseland Developers <onboarding@resend.dev>",
-      to: email,
+      from: "Roseland Developers <noreply@roselanddevelopers.com>",
+      to: email, // user email
       subject: "Thank you for contacting Roseland Developers",
       html: `
         <p>Hi ${name},</p>
@@ -42,6 +42,9 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error(error);
-    return NextResponse.json({ success: false, error: error instanceof Error ? error.message : String(error) }, { status: 500 });
+    return NextResponse.json({ 
+      success: false, 
+      error: error instanceof Error ? error.message : String(error) 
+    }, { status: 500 });
   }
 }

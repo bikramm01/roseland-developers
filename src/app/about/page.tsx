@@ -11,7 +11,7 @@ export default function AboutPage() {
       <Header />
 
      {/* HERO */}
-<section className="relative h-[60vh] flex flex-col items-center justify-center text-center overflow-hidden">
+<section className="relative h-[90vh] flex flex-col items-center justify-center text-center overflow-hidden">
   <div className="absolute inset-0 bg-[url('/about-hero.jpg')] bg-cover bg-center opacity-30"></div>
   <div className="absolute inset-0 bg-black/70"></div>
   <div className="relative z-10 max-w-3xl px-6">
@@ -80,7 +80,7 @@ export default function AboutPage() {
   {
     role: "Design & Architecture",
     desc: "Crafting spaces that are functional, sustainable, and aesthetically pleasing.",
-    img: "/team1.jpg",
+    img: "/team1.JPG",
   },
 ].map((leader, i) => (
   <motion.div

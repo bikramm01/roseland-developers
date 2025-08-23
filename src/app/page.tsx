@@ -96,9 +96,9 @@ export default function Home() {
         <h2 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-12">Our Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {[
-            { title: "Luxury Apartments", desc: "Modern high-rises designed for premium lifestyle.", img: "/project1.jpg", location: "Gurgaon, India" },
-            { title: "Office Spaces", desc: "Smart, sustainable, and tech-ready workplaces.", img: "/project2.jpg", location: "Noida, India" },
-            { title: "Township Projects", desc: "Integrated communities blending work & life.", img: "/project3.jpg", location: "Delhi NCR" },
+            { title: "Luxury Apartments", desc: "Modern high-rises designed for premium lifestyle.", img: "/comingsoon.png", location: "Gurgaon, India" },
+            { title: "Modern Home", desc: "Smart, sustainable, and ready stay.", img: "/comingsoon.png", location: "Noida, India" },
+            { title: "Township Projects", desc: "Integrated communities blending work & life.", img: "/comingsoon.png", location: "Delhi NCR" },
           ].map((proj, i) => (
             <motion.div
               key={i}
